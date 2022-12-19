@@ -21,7 +21,6 @@ function App() {
     console.log(product);
     return product;
   }
-
   const addToCart = (e) => {
     let cartCopy = [...cart];
     const index = findIndex(e.target.id);
@@ -36,6 +35,10 @@ function App() {
     }
     setCart(cartCopy);
     console.log(cart);
+  }
+  const removeFromCart = (e) => {
+    const cartCopy = cart.filter(item => item.id !== e.target.id);
+    setCart(cartCopy);
   }
   return (
     <div className="App">
@@ -52,7 +55,7 @@ function App() {
           <Route index element={<Products add={addToCart}/>} />
           <Route path=":id" element={<Product />} />
         </Route>
-        <Route path="/cart" element={<Cart cart={cart}/>} />
+        <Route path="/cart" element={<Cart cart={cart} del={removeFromCart}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

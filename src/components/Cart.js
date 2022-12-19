@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({cart}) => {
+const Cart = ({ cart, del }) => {
     return (
         <div className="cart">
             <h1>Shopping Cart</h1>
@@ -11,6 +11,7 @@ const Cart = ({cart}) => {
                         <h5>{product.about}</h5>
                         <p>Quantity: {product.quantity}</p>
                         <p>Price: {product.price}</p>
+                        <button id={product.id} onClick={del}>Remove</button>
                     </div>
                 )
             })}

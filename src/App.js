@@ -74,7 +74,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/products">
           <Route index element={<Products add={addToCart} prod={productList} />} />
-          <Route path=":id" element={<Product />} />
+          <Route path=":id" element={<Product add={addToCart}/>} />
         </Route>
         <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />
         <Route path="*" element={<NotFound />} />

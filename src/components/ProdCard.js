@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProdCard = ({ data, add, view }) => {
+    const master = [data, add]
     return (
         <div className="product-card" id={data.id}>
             <h1>{data.title}</h1>

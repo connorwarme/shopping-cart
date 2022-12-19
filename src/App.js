@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -5,9 +6,36 @@ import Products from "./components/Products";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
+import content from "./components/Content";
 import './App.css';
 
 function App() {
+  const [cart, setCart] = useState([]);
+  const [productList, setProductList] = useState(content);
+
+  const findIndex = (id) => {
+    return cart.findIndex(item => item.id === id);
+  }
+  const findProduct = (id) => {
+    const product = productList.find(item => item.id === id);
+    console.log(product);
+    return product;
+  }
+
+  const addToCart = (e) => {
+    let cartCopy = [...cart];
+    const index = findIndex(e.target.id);
+    // check if item is in cart, if so, add +1 to quantity
+    if (index !== -1) {
+      cartCopy[index].quantity = + 1;
+    } else {
+      // if not, add to cart
+      cartCopy = cartCopy.concat(findProduct(e.target.id));
+      console.log(cartCopy);      
+    }
+    setCart(cartCopy);
+    console.log(cart);
+  }
   return (
     <div className="App">
       <nav>
@@ -20,10 +48,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products">
-          <Route index element={<Products />} />
+          <Route index element={<Products add={addToCart}/>} />
           <Route path=":id" element={<Product />} />
         </Route>
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart cart={cart}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

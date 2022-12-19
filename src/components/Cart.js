@@ -9,6 +9,8 @@ const Cart = ({cart}) => {
                     <div key={product.id}>
                         <h3>{product.title}</h3>
                         <h5>{product.about}</h5>
+                        <p>Quantity: {product.quantity}</p>
+                        <p>Price: {product.price}</p>
                     </div>
                 )
             })}

@@ -27,11 +27,12 @@ function App() {
     const index = findIndex(e.target.id);
     // check if item is in cart, if so, add +1 to quantity
     if (index !== -1) {
-      cartCopy[index].quantity = + 1;
+      cartCopy[index].quantity += 1;
     } else {
       // if not, add to cart
-      cartCopy = cartCopy.concat(findProduct(e.target.id));
-      console.log(cartCopy);      
+      const product = findProduct(e.target.id);
+      product.quantity = 1;
+      cartCopy = cartCopy.concat(product);    
     }
     setCart(cartCopy);
     console.log(cart);

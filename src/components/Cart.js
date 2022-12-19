@@ -4,9 +4,10 @@ const Cart = ({ cart, del, inc, dec }) => {
     return (
         <div className="cart">
             <h1>Shopping Cart</h1>
+            <ul>
             {cart.map(product => {
                 return (
-                    <div key={product.id}>
+                    <li key={product.id}>
                         <h3>{product.title}</h3>
                         <h5>{product.about}</h5>
                         <p>Quantity: {product.quantity}</p>
@@ -14,9 +15,10 @@ const Cart = ({ cart, del, inc, dec }) => {
                         <button id={product.id} onClick={del}>Remove</button>
                         <button id={product.id} onClick={dec}>Decrement</button>
                         <button id={product.id} onClick={inc}>Increment</button>
-                    </div>
+                    </li>
                 )
             })}
+            </ul>
         </div>
     )
 }

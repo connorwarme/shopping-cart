@@ -40,6 +40,27 @@ function App() {
     const cartCopy = cart.filter(item => item.id !== e.target.id);
     setCart(cartCopy);
   }
+  const adjustQuantity = (id, boolean) => {
+    const cartCopy = [...cart];
+    const index = findIndex(id);
+    console.log(index);
+    if (boolean) {
+      cartCopy[index].quantity += 1;
+    } else {
+      cartCopy[index].quantity -= 1;
+    }
+    setCart(cartCopy);
+    return index;
+  }
+  const increment = (e) => {
+    adjustQuantity(e.target.id, true);
+  }
+  const decrement = (e) => {
+    const index = adjustQuantity(e.target.id, false);
+    if (cart[index].quantity === 0) {
+      removeFromCart(e);
+    }
+  }
   return (
     <div className="App">
       <nav>
@@ -55,7 +76,7 @@ function App() {
           <Route index element={<Products add={addToCart}/>} />
           <Route path=":id" element={<Product />} />
         </Route>
-        <Route path="/cart" element={<Cart cart={cart} del={removeFromCart}/>} />
+        <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

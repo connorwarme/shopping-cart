@@ -73,7 +73,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products">
-          <Route index element={<Products add={addToCart}/>} />
+          <Route index element={<Products add={addToCart} prod={productList} />} />
           <Route path=":id" element={<Product />} />
         </Route>
         <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />

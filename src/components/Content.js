@@ -7,6 +7,7 @@ const content = [
         about: "details about the 4 week counseling program",
         quantity: 0,
         price: "$400",
+        url: '4-sessions',
     },
     {
         id: uuidv4(),
@@ -14,6 +15,7 @@ const content = [
         about: "details about the 8 week counseling program",
         quantity: 0,
         price: "$800",
+        url: '8-sessions',
     },
     {
         id: uuidv4(),
@@ -21,6 +23,7 @@ const content = [
         about: "details about the 12 week counseling program",
         quantity: 0,
         price: "$1200",
+        url: '12-sessions',
     },
     {
         id: uuidv4(),
@@ -28,6 +31,7 @@ const content = [
         about: "details about the single session",
         quantity: 0,
         price: "$150",
+        url: 'single-session',
     }
 ]
 

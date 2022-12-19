@@ -1,12 +1,13 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Product = () => {
-    const { id } = useParams();
-
+    const location = useLocation();
+    // const [obj, add] = useLocation().state;
+    console.log(location);
     return (
         <div className="product">
-            <h1>Product Page: {id}</h1>
+            <h1>Product Page: {}</h1>
         </div>
     )
 }

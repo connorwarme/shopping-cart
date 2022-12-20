@@ -31,7 +31,6 @@ const Product = (props) => {
     const handleAdd = (e) => {
         console.log(props);
         add(e, quantity);
-        // adjust(cart, obj.id, quantity);
         console.log('fire');
     }
 

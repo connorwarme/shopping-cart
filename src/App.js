@@ -24,7 +24,7 @@ function App() {
   const addToCart = (e, count) => {
     let cartCopy = [...cart];
     const index = findIndex(e.target.id);
-    // check if item is in cart, if so, add +1 to quantity
+    // check if item is in cart, if so, add to quantity
     if (index !== -1) {
       cartCopy[index].quantity += count ? count : 1;
     } else {
@@ -34,7 +34,6 @@ function App() {
       cartCopy = cartCopy.concat(product);    
     }
     setCart(cartCopy);
-    return cart;
   }
   const removeFromCart = (e) => {
     const cartCopy = cart.filter(item => item.id !== e.target.id);
@@ -54,13 +53,6 @@ function App() {
     }
     setCart(cartCopy);
     return index;
-  }
-  const updateQuantity = (prevCart, id, amount) => {
-    setCart(prevCart => [...prevCart]);
-    const cartCopy = [...cart];
-    const index = findIndex(id);
-    cartCopy[index].quantity = amount;
-    setCart(cartCopy);
   }
   const increment = (e) => {
     adjustQuantity(e.target.id, true);
@@ -84,7 +76,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/products">
           <Route index element={<Products add={addToCart} prod={productList}/>} />
-          <Route path=":id" element={<Product add={addToCart} adjust={updateQuantity} cart={cart}/>} />
+          <Route path=":id" element={<Product add={addToCart} cart={cart}/>} />
         </Route>
         <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />
         <Route path="*" element={<NotFound />} />

@@ -40,11 +40,13 @@ function App() {
     const cartCopy = cart.filter(item => item.id !== e.target.id);
     setCart(cartCopy);
   }
-  const adjustQuantity = (id, boolean) => {
+  const adjustQuantity = (id, boolean, amount) => {
     const cartCopy = [...cart];
     const index = findIndex(id);
     console.log(index);
-    if (boolean) {
+    if (amount) {
+      cartCopy[index].quantity = amount;
+    } else if (boolean) {
       cartCopy[index].quantity += 1;
     } else {
       cartCopy[index].quantity -= 1;
@@ -73,7 +75,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products">
-          <Route index element={<Products add={addToCart} prod={productList} />} />
+          <Route index element={<Products add={addToCart} prod={productList} adjust={adjustQuantity}/>} />
           <Route path=":id" element={<Product add={addToCart}/>} />
         </Route>
         <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />

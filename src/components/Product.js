@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom";
 const Product = (props) => {
     const location = useLocation();
     const obj = location.state;
-
-    const { add } = props;
+    const add = props.add;
+    const adjust = props.adjust;
 
     const [quantity, setQuantity] = useState(1);
 
@@ -27,12 +27,18 @@ const Product = (props) => {
     const handleChange = (e) => {
         setQuantity(Number(e.target.value));
     }
+    const handleAdd = async (e) => {
+        console.log(props);
+        const cart = await add(e);
+        cart.then(adjust(obj.id, null, quantity));
+        console.log('fire');
+    }
 
     return (
         <div className="product">
             <h1>Product Page: {obj.title}</h1>
             <p>{obj.about}</p>
-            <button id={obj.id} onClick={add}>Add to Cart</button>
+            <button id={obj.id} onClick={handleAdd}>Add to Cart</button>
             <button onClick={decrement}> - </button>
             <input type="number" value={quantity} onChange={handleChange} min="1" max="5"></input>
             <button onClick={increment}> + </button>

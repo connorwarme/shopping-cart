@@ -4,4 +4,6 @@ import App from './App';
 
 afterEach(cleanup);
 
-
+test("nada", () => {
+    console.log('pass');
+})

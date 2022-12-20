@@ -9,6 +9,7 @@ const Product = (props) => {
     const cart = props.cart;
 
     const [quantity, setQuantity] = useState(1);
+    const [error, setError] = useState('');
 
     const increment = () => {
         if (quantity < 5) {
@@ -25,12 +26,25 @@ const Product = (props) => {
             setQuantity(value);
         }
     }
+    const checkNumber = (input) => {
+        if (input < 1) {
+            setError('Quantity minimum: 1');
+        } else if (input > 5) {
+            setError('Quantity maximum: 5');
+        } else {
+            setError('');
+            return true;
+        }
+    }
     const handleChange = (e) => {
         setQuantity(Number(e.target.value));
+        checkNumber(Number(e.target.value));
     }
     const handleAdd = (e) => {
-        console.log(props);
-        add(e, quantity);
+        console.log(error.length);
+        if (error.length === 0) {
+            add(e, quantity);
+        }
         console.log('fire');
     }
 
@@ -42,6 +56,7 @@ const Product = (props) => {
             <button onClick={decrement}> - </button>
             <input type="number" value={quantity} onChange={handleChange} min="1" max="5"></input>
             <button onClick={increment}> + </button>
+            <span>{error}</span>
             
         </div>
     )

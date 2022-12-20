@@ -6,6 +6,7 @@ const Product = (props) => {
     const obj = location.state;
     const add = props.add;
     const adjust = props.adjust;
+    const cart = props.cart;
 
     const [quantity, setQuantity] = useState(1);
 
@@ -27,10 +28,10 @@ const Product = (props) => {
     const handleChange = (e) => {
         setQuantity(Number(e.target.value));
     }
-    const handleAdd = async (e) => {
+    const handleAdd = (e) => {
         console.log(props);
-        const cart = await add(e);
-        cart.then(adjust(obj.id, null, quantity));
+        add(e, quantity);
+        // adjust(cart, obj.id, quantity);
         console.log('fire');
     }
 

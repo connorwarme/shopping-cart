@@ -1,5 +1,4 @@
 import React from "react";
-import Product from "./Product";
 import ProdCard from "./ProdCard";
 import content from "./Content";
 

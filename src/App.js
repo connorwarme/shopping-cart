@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -12,6 +12,7 @@ import './App.css';
 function App() {
   const [cart, setCart] = useState([]);
   const [productList, setProductList] = useState(content);
+  const [cartNumber, setCartNumber] = useState(0);
 
   const findIndex = (id) => {
     return cart.findIndex(item => item.id === id);
@@ -39,14 +40,12 @@ function App() {
     const cartCopy = cart.filter(item => item.id !== e.target.id);
     setCart(cartCopy);
   }
-  const adjustQuantity = (id, boolean, amount) => {
+  const adjustQuantity = (id, boolean) => {
     const cartCopy = [...cart];
     console.log(cartCopy);
     const index = findIndex(id);
     console.log(index);
-    if (amount) {
-      cartCopy[index].quantity = amount;
-    } else if (boolean) {
+    if (boolean) {
       cartCopy[index].quantity += 1;
     } else {
       cartCopy[index].quantity -= 1;
@@ -63,13 +62,20 @@ function App() {
       removeFromCart(e);
     }
   }
+
+  useEffect(() => {
+    let value = 0;
+    cart.forEach(item => value += item.quantity);
+    setCartNumber(value);
+  }, [cart]);
+
   return (
     <div className="App">
       <nav>
         <ul><Link to="/">Home</Link></ul>
         <ul><Link to="/about">About</Link></ul>
         <ul><Link to="/products">Products</Link></ul>
-        <ul><Link to="/cart">Cart</Link></ul>
+        <ul><Link to="/cart">Cart: {cartNumber}</Link></ul>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,3 +1,6 @@
 ideas for improvement // objectives
 
 - when you click "Add to Cart", it'd be cool to have a little pop-up: "Successfully added to cart" w/ option to view cart
+
+- shopping cart should have a column tallying up the price, and displaying total price
+- add some text or logo for when the cart is empty...

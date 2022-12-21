@@ -6,7 +6,7 @@ const content = [
         title: "4 Sessions",
         about: "details about the 4 week counseling program",
         quantity: 0,
-        price: "$400",
+        price: 400,
         url: '4-sessions',
     },
     {
@@ -14,7 +14,7 @@ const content = [
         title: "8 Sessions",
         about: "details about the 8 week counseling program",
         quantity: 0,
-        price: "$800",
+        price: 800,
         url: '8-sessions',
     },
     {
@@ -22,7 +22,7 @@ const content = [
         title: "12 Sessions",
         about: "details about the 12 week counseling program",
         quantity: 0,
-        price: "$1200",
+        price: 1200,
         url: '12-sessions',
     },
     {
@@ -30,7 +30,7 @@ const content = [
         title: "Single Session Consultation",
         about: "details about the single session",
         quantity: 0,
-        price: "$150",
+        price: 150,
         url: 'single-session',
     }
 ]

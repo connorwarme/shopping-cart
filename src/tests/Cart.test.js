@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen, cleanup } from '@testing-library/react';
+import { MemoryRouter } from "react-router-dom";
 import Cart from "../components/Cart";
 import content from "../components/Content";
 import userEvent from "@testing-library/user-event";
@@ -10,12 +11,12 @@ cartContent.forEach((item, index) => item.quantity = (index + 1));
 afterAll(cleanup);
 
 test("renders w/ title heading", () => {
-    render(<Cart cart={cartContent}/>);
+    render(<Cart cart={cartContent}/>, {wrapper: MemoryRouter});
     expect(screen.getByRole('heading', {name: "Shopping Cart"}).textContent).toMatch('Shopping Cart');
 })
 
 test("renders cart items", () => {
-    render(<Cart cart={cartContent} />);
+    render(<Cart cart={cartContent} />, {wrapper: MemoryRouter});
     // renders 4 list items
     expect(screen.getAllByRole('listitem').length).toEqual(4);
     // each li has title heading
@@ -42,19 +43,19 @@ test("renders cart items", () => {
 
 test("remove button functions aka fires event w/ click", () => {
     const handleClick = jest.fn();
-    render(<Cart cart={[cartContent[0]]} del={handleClick} />);
+    render(<Cart cart={[cartContent[0]]} del={handleClick} />, {wrapper: MemoryRouter});
     userEvent.click(screen.getByRole('button', {name: 'Remove'}));
     expect(handleClick).toHaveBeenCalledTimes(1);
 })
 test("increment button functions aka fires event w/ click", () => {
     const handleClick = jest.fn();
-    render(<Cart cart={[cartContent[0]]} inc={handleClick} />);
+    render(<Cart cart={[cartContent[0]]} inc={handleClick} />, {wrapper: MemoryRouter});
     userEvent.click(screen.getByRole('button', {name: 'Increment'}));
     expect(handleClick).toHaveBeenCalledTimes(1);
 })
 test("decrement button functions aka fires event w/ click", () => {
     const handleClick = jest.fn();
-    render(<Cart cart={[cartContent[0]]} dec={handleClick} />);
+    render(<Cart cart={[cartContent[0]]} dec={handleClick} />, {wrapper: MemoryRouter});
     userEvent.click(screen.getByRole('button', {name: 'Decrement'}));
     expect(handleClick).toHaveBeenCalledTimes(1);
 })

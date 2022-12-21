@@ -5,6 +5,7 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
 import content from "./components/Content";
 import './App.css';
@@ -85,6 +86,7 @@ function App() {
           <Route path=":id" element={<Product add={addToCart} cart={cart}/>} />
         </Route>
         <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

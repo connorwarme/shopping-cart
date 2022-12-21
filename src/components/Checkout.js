@@ -5,7 +5,8 @@ const Checkout = () => {
     return (
         <div className="checkout">
             <h1>Checkout Page</h1>
-            <p>awaiting logic...which I have yet to learn! Stay tuned :)</p>
+            <p>Awaiting logic...which I have yet to learn! Stay tuned :)</p>
+            <button><Link to="/cart">Return to Cart</Link></button>
         </div>
     )
 }

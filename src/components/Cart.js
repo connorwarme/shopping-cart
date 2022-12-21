@@ -1,6 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cart = ({ cart, del, inc, dec }) => {
+    const checkoutBtn = () => {
+        if (cart.length > 0) {
+            return (
+                <button><Link to="/checkout">Checkout</Link></button>
+            )
+        }
+    }
     return (
         <div className="cart">
             <h1>Shopping Cart</h1>
@@ -19,6 +27,7 @@ const Cart = ({ cart, del, inc, dec }) => {
                 )
             })}
             </ul>
+            <div>{checkoutBtn()}</div>
         </div>
     )
 }

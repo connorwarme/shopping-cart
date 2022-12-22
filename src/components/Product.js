@@ -5,24 +5,19 @@ const Product = (props) => {
     const location = useLocation();
     const obj = location.state;
     const add = props.add;
-    const adjust = props.adjust;
-    const cart = props.cart;
 
     const [quantity, setQuantity] = useState(1);
     const [error, setError] = useState('');
 
     const increment = () => {
         if (quantity < 5) {
-            let value = quantity;
-            value += 1;
+            let value = quantity + 1;
             setQuantity(value);
         }
     }
     const decrement = () => {
         if (quantity > 1) {
-            let value = quantity;
-            console.log(typeof(value));
-            value -= 1;
+            let value = quantity - 1;
             setQuantity(value);
         }
     }
@@ -45,13 +40,13 @@ const Product = (props) => {
         if (error.length === 0) {
             add(e, quantity);
         }
-        console.log('fire');
     }
 
     return (
         <div className="product">
             <h1>Product Page: {obj.title}</h1>
             <p>{obj.about}</p>
+            <p>Price: ${obj.price}</p>
             <button id={obj.id} onClick={handleAdd}>Add to Cart</button>
             <button onClick={decrement}> - </button>
             <input type="number" value={quantity} onChange={handleChange} min="1" max="5"></input>

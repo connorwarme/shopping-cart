@@ -1,0 +1,9 @@
+.home {
+    background-image: url('../imgs/Amity_Goldengate_highres-10.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 1000px;
+    width: 100%;
+}

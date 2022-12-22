@@ -1,6 +1,7 @@
 import React from "react";
 import ProdCard from "./ProdCard";
 import content from "./Content";
+import '../style/Products.css';
 
 const Products = ({ add, prod }) => {
     // this fn isn't doing anything... I passed state through the Link

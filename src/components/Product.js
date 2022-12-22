@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import '../style/Product.css';
 
 const Product = (props) => {
     const location = useLocation();

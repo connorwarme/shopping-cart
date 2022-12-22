@@ -1,0 +1,9 @@
+.product {
+    background-image: url('../imgs/20211031-DSC00096-Edit.JPG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 1000px;
+    width: 100%;
+}

@@ -38,8 +38,10 @@ a {
   display: inline-block;
   position: relative;
 }
+a::before,
 a::after {
   content: '';
+  display: block;
   position: relative;
   width: 100%;
   transform: scaleX(0);
@@ -56,6 +58,7 @@ a:visited {
 a:hover {
 
 }
+a:hover::before,
 a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;

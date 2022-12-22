@@ -2,23 +2,49 @@
   margin: 0;
   padding: 0;
 }
-
 .app {
   text-align: center;
   display: flex;
   flex-direction: column;
-  min-height: 1000px;
+  min-height: 1600px;
   background-image: url('./imgs/Amity_Goldengate_highres-10.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center bottom;
   background-size: cover;
   position: relative;
   width: 100%;
 }
+.header-container {
+  display: flex;
+  background-color: rgba(241, 241, 241, 0.6);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.name-container {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+nav {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding: 0 15px;
+  /* text-shadow: 2px 2px black; */
+}
+a:visited {
+  
+}
+a:hover {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+a:active {
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -27,20 +53,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

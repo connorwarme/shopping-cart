@@ -72,12 +72,15 @@ const App = () => {
 
   return (
     <div className="app">
-      <nav>
-        <ul><Link to="/">Home</Link></ul>
-        <ul><Link to="/about">About</Link></ul>
-        <ul><Link to="/products">Products</Link></ul>
-        <ul><Link to="/cart">Cart: {cartNumber}</Link></ul>
-      </nav>
+      <div className="header-container">
+        <div className="name-container">Amity Warme</div>
+        <nav>
+          <ul><Link to="/">Home</Link></ul>
+          <ul><Link to="/about">About</Link></ul>
+          <ul><Link to="/products">Products</Link></ul>
+          <ul><Link to="/cart">Cart: {cartNumber}</Link></ul>
+        </nav>
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

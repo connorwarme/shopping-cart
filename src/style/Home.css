@@ -1,3 +1,14 @@
 .home {
     flex-grow: 1;
 }
+.name-container {
+    padding: 20px;
+    display: flex;
+}
+.first-name,
+.last-name {
+    text-align: left;
+    font-size: 72px;
+    font-weight: 700;
+    transform: rotate(-45deg);
+}

@@ -14,9 +14,9 @@ const Products = ({ add, prod }) => {
         console.log(product);
     }
     return (
-        <div className="products">
-            <h1>Products Page</h1>
-            <div className="products-container">
+        <div className="products-container">
+            <div className="products-content">
+            <h1 className="products-title">Packages</h1>
                 {content.map(item => {
                     return <ProdCard key={item.id} data={item} add={add} view={handleViewClick}/>
                 })}

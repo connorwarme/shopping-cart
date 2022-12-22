@@ -30,7 +30,7 @@
 nav {
   display: flex;
 }
-a {
+ul > a {
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -38,8 +38,8 @@ a {
   display: inline-block;
   position: relative;
 }
-a::before,
-a::after {
+ul > a::before,
+ul > a::after {
   content: '';
   display: block;
   position: relative;
@@ -52,18 +52,18 @@ a::after {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-a:visited {
+ul > a:visited {
   
 }
-a:hover {
+ul > a:hover {
 
 }
-a:hover::before,
-a:hover::after {
+ul > a:hover::before,
+ul > a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-a:active {
+ul > a:active {
 
 }
 

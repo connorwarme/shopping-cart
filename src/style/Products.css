@@ -2,3 +2,58 @@
     background-image: url('../imgs/20211031-DSC00096-Edit.JPG');
     background-position: center center;
 }
+.products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.products-content {
+    grid-column: 2/3;
+    background-color: rgba(241, 241, 241, 0.6);
+    margin: 3vh 10vw 3vh 0;
+    border-radius: 10px;
+}
+.products-title {
+    margin-top: 25px;
+}
+.product-card {
+    min-height: 130px;
+    min-width: 480px;
+    background-color: rgba(241, 241, 241, 0.8);
+    margin: 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+}
+.product-buttons > button {
+    padding: 5px 10px;
+    border: 2px solid black;
+    margin: 10px 15px 0 15px;
+    transition-duration: .3s;
+}
+.product-buttons > button:hover {
+    cursor: pointer;
+}
+.product-buttons > button:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 3px black;
+}
+.view > a {
+    text-decoration: none;
+    color: black;
+}
+.view > a:visited {
+
+}
+.view > a:hover {
+    
+}
+.view > a:active {
+    
+}

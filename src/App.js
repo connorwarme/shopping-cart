@@ -77,7 +77,7 @@ const App = () => {
         <nav>
           <ul><Link to="/">Home</Link></ul>
           <ul><Link to="/about">About</Link></ul>
-          <ul><Link to="/products">Products</Link></ul>
+          <ul><Link to="/products">Packages</Link></ul>
           <ul><Link to="/cart">Cart: {cartNumber}</Link></ul>
         </nav>
       </div>

@@ -10,7 +10,7 @@ import NotFound from "./components/NotFound";
 import content from "./components/Content";
 import './App.css';
 
-function App() {
+const App = () => {
   const [cart, setCart] = useState([]);
   const [productList, setProductList] = useState(content);
   const [cartNumber, setCartNumber] = useState(0);
@@ -71,7 +71,7 @@ function App() {
   }, [cart]);
 
   return (
-    <div className="App">
+    <div className="app">
       <nav>
         <ul><Link to="/">Home</Link></ul>
         <ul><Link to="/about">About</Link></ul>

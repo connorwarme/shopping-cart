@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../style/Cart.css';
 
 const Cart = ({ cart, del, inc, dec }) => {
+    useEffect(() => {
+        const app = document.querySelector('div.app');
+        app.setAttribute('id', 'cart');
+    }, [])
     const calculateTotal = () => {
         let value = 0;
         cart.forEach(item => value += item.price * item.quantity);

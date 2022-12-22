@@ -1,5 +1,19 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 1000px;
+  background-image: url('./imgs/Amity_Goldengate_highres-10.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  width: 100%;
 }
 
 .App-logo {

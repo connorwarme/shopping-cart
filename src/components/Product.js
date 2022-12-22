@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import '../style/Product.css';
 
 const Product = (props) => {
+    useEffect(() => {
+        const app = document.querySelector('div.app');
+        app.setAttribute('id', 'product');
+    }, [])
     const location = useLocation();
     const obj = location.state;
     const add = props.add;

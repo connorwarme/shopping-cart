@@ -1,9 +1,3 @@
-.cart {
+.app#cart {
     background-image: url('../imgs/JPM09642.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    min-height: 1000px;
-    width: 100%;
 }

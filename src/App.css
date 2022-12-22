@@ -35,13 +35,30 @@ a {
   color: black;
   font-weight: 600;
   padding: 0 15px;
-  /* text-shadow: 2px 2px black; */
+  display: inline-block;
+  position: relative;
+}
+a::after {
+  content: '';
+  position: relative;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 a:visited {
   
 }
 a:hover {
 
+}
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 a:active {
 

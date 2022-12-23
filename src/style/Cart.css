@@ -2,3 +2,65 @@
     background-image: url('../imgs/JPM09642.jpg');
     background-position: center center;
 }
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cart-content {
+    background-color: rgba(241, 241, 241, 0.6);
+    margin: 5vh 8vw;
+}
+.cart-content > ul {
+    list-style: none;
+}
+.cart-content > ul > li {
+    margin: 10px 0;
+}
+.cart-item-total {
+    text-align: end;
+    margin: 0 25px;
+}
+.checkout-container {
+    padding: 15px 0;
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-container > p {
+    align-self: flex-end;
+    border-top: 4px solid black;
+    padding: 15px 0;
+}
+.checkout-container > button {
+    font-size: 18px;
+    font-weight: 500;
+    width: 200px;
+    padding: 10px 20px;
+    background-color: rgba(241, 241, 241, 0.8);
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 10px 15px 0 15px;
+    transition-duration: .3s;
+}
+.checkout-container > button:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+.checkout-container > button:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 3px black;
+}
+.checkout-container > button > a {
+    text-decoration: none;
+}
+.checkout-container > button > a:visited {
+    color: black;
+}
+.checkout-container > button > a:hover {
+
+}
+.checkout-container > button > a:active {
+
+}

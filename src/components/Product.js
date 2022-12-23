@@ -46,18 +46,20 @@ const Product = (props) => {
             add(e, quantity);
         }
     }
-
     return (
-        <div className="product">
-            <h1>Product Page: {obj.title}</h1>
-            <p>{obj.about}</p>
-            <p>Price: ${obj.price}</p>
-            <button id={obj.id} onClick={handleAdd}>Add to Cart</button>
-            <button onClick={decrement}> - </button>
-            <input type="number" value={quantity} onChange={handleChange} min="1" max="5"></input>
-            <button onClick={increment}> + </button>
-            <span>{error}</span>
-            
+        <div className="product-container">
+            <div className="product">
+                <h1>Package: {obj.title}</h1>
+                <p>{obj.about}</p>
+                <p>Price: ${obj.price}</p>
+                <div className="adjust-container">
+                    <button onClick={decrement}> - </button>
+                    <input type="number" value={quantity} onChange={handleChange} min="1" max="5"></input>
+                    <button onClick={increment}> + </button>
+                    <span>{error}</span>
+                </div>
+                <button className="product-add-btn" id={obj.id} onClick={handleAdd}>Add to Cart</button>
+            </div>
         </div>
     )
 }

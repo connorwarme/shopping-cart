@@ -10,7 +10,6 @@ const ProdCard = ({ data, add, view }) => {
         photo.alt = "Added ✔️";
         dom.appendChild(photo);
         dom.classList.add('add-check');
-        console.log('did it work?')
     }
     const normalDisplay = (dom) => {
         dom.removeChild(dom.firstChild);
@@ -19,10 +18,8 @@ const ProdCard = ({ data, add, view }) => {
     }
     const addToCartVisual = (e) => {
         add(e);
-        console.log(e.target);
         addedDisplay(e.target);
-        setTimeout(() => {normalDisplay(e.target)}, 10000);
-
+        setTimeout(() => {normalDisplay(e.target)}, 1000);
     }
     return (
         <div className="product-card" id={data.id}>

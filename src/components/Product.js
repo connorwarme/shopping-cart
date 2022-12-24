@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Add from '../imgs/cart-check.png';
 import '../style/Product.css';
 
 const Product = (props) => {
@@ -40,10 +41,25 @@ const Product = (props) => {
         setQuantity(Number(e.target.value));
         checkNumber(Number(e.target.value));
     }
+    const addedDisplay = (dom) => {
+        dom.textContent = '';
+        const photo = document.createElement('img');
+        photo.src = Add;
+        photo.alt = "Added ✔️";
+        dom.appendChild(photo);
+        dom.classList.add('add-check');
+    }
+    const normalDisplay = (dom) => {
+        dom.removeChild(dom.firstChild);
+        dom.textContent = "Add to Cart";
+        dom.classList.remove('add-check');
+    }
     const handleAdd = (e) => {
         console.log(error.length);
         if (error.length === 0) {
             add(e, quantity);
+            addedDisplay(e.target);
+            setTimeout(() => {normalDisplay(e.target)}, 1000);
         }
     }
     return (

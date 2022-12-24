@@ -36,9 +36,9 @@ const Cart = ({ cart, del, inc, dec }) => {
                         <p>Quantity: {product.quantity}</p>
                         <p>Price: ${product.price}</p>
                         <div className="cart-buttons">
-                            <button id={product.id} onClick={del}>Remove</button>
-                            <button id={product.id} onClick={dec}>Decrement</button>
-                            <button id={product.id} onClick={inc}>Increment</button>
+                            <button className="remove-btn" id={product.id} onClick={del}>Remove</button>
+                            <button className="dec-btn" id={product.id} onClick={dec}></button>
+                            <button className="inc-btn" id={product.id} onClick={inc}></button>
                         </div>
                         <p className="cart-item-total">Total: ${price}</p>
                     </li>

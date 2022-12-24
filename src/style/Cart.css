@@ -16,6 +16,43 @@
 .cart-content > ul > li {
     margin: 10px 0;
 }
+li > * {
+    padding: 3px 0;
+}
+.cart-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.remove-btn {
+    padding: 5px 10px;
+    margin: 0 20px 0 0;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+.inc-btn,
+.dec-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 0;
+    position: relative;
+    margin: 0 5px 0 0;
+}
+.inc-btn::before, 
+.inc-btn::after,
+.dec-btn::after {
+    content: "";
+    background-color: black;
+    height: 2px;
+    width: 10px;
+    position: absolute;
+    left: 8px;
+}
+.inc-btn::before {
+    transform: rotate(90deg);
+}
 .cart-item-total {
     text-align: end;
     margin: 0 25px;

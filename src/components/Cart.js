@@ -31,8 +31,8 @@ const Cart = ({ cart, del, inc, dec }) => {
                 const price = Number(product.price) * product.quantity;
                 return (
                     <li key={product.id}>
-                        <h3>{product.title}</h3>
-                        <h5>{product.about}</h5>
+                        <h2>{product.title}</h2>
+                        <p>{product.about}</p>
                         <p>Quantity: {product.quantity}</p>
                         <p>Price: ${product.price}</p>
                         <div className="cart-buttons">

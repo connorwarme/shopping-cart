@@ -16,16 +16,12 @@ const Product = (props) => {
     const [error, setError] = useState('');
 
     const increment = () => {
-        if (quantity < 5) {
-            let value = quantity + 1;
-            setQuantity(value);
-        }
+        setQuantity(quantity + 1);
+        checkNumber(quantity + 1);
     }
     const decrement = () => {
-        if (quantity > 1) {
-            let value = quantity - 1;
-            setQuantity(value);
-        }
+        setQuantity(quantity - 1);
+        checkNumber(quantity - 1);
     }
     const checkNumber = (input) => {
         if (input < 1) {
@@ -47,15 +43,18 @@ const Product = (props) => {
         photo.src = Add;
         photo.alt = "Added ✔️";
         dom.appendChild(photo);
-        dom.classList.add('add-check');
+        dom.classList.add('package-add-check');
     }
     const normalDisplay = (dom) => {
         dom.removeChild(dom.firstChild);
         dom.textContent = "Add to Cart";
-        dom.classList.remove('add-check');
+        dom.classList.remove('package-add-check');
     }
     const handleAdd = (e) => {
         console.log(error.length);
+        const value = Number(document.getElementsByClassName('package-input')[0].value);
+        console.log(value);
+        checkNumber(value);
         if (error.length === 0) {
             add(e, quantity);
             addedDisplay(e.target);
@@ -70,7 +69,7 @@ const Product = (props) => {
                 <p>Price: ${obj.price}</p>
                 <div className="adjust-container">
                     <button onClick={decrement}> - </button>
-                    <input type="number" value={quantity} onChange={handleChange} min="1" max="5"></input>
+                    <input type="number" value={quantity} onChange={handleChange} min="1" max="5" className="package-input"></input>
                     <button onClick={increment}> + </button>
                     <span>{error}</span>
                 </div>

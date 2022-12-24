@@ -63,7 +63,7 @@
     transform: scale(0.97);
     box-shadow: 1px 1px 3px black;
 }
-.add-check {
+.package-add-check {
     display: flex;
     justify-content: center;
     align-items: center;

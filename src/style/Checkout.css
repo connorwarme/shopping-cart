@@ -1,0 +1,27 @@
+.checkout-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+.checkout-content {
+    min-width: 400px;
+    background-color: rgba(241, 241, 241, 0.6);
+    padding: 10px 0;
+    margin: 5vh 8vw;
+    border-radius: 3px;
+}
+.checkout-content > * {
+    margin: 5px;
+}
+.checkout-content > button {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+.checkout-content > button > a {
+    text-decoration: none;
+     color: black;
+}
+.checkout-content > button:active {
+    transform: scale(0.97);
+    box-shadow: 1px 1px 3px black;
+}

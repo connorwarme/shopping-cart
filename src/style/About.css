@@ -11,7 +11,7 @@
     grid-area: 1 / 3 / 2 / 5;
     background-color: rgba(241, 241, 241, 0.8);
     margin: 100px 50px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .about-content h1 {
     font-size: 64px;

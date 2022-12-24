@@ -10,7 +10,7 @@
     grid-column: 2/3;
     background-color: rgba(241, 241, 241, 0.6);
     margin: 3vh 10vw 3vh 0;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .products-title {
     margin-top: 25px;
@@ -20,7 +20,7 @@
     min-width: 480px;
     background-color: rgba(241, 241, 241, 0.8);
     margin: 25px;
-    border-radius: 5px;
+    border-radius: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;

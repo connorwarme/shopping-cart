@@ -1,6 +1,9 @@
 ideas for improvement // objectives
-
+- fonts? would add a bunch of character
+- text content on Home? "ATHLETE / DIETICIAN" then one line athlete mantra, one line nutrition philosophy..?
+- figure out how to scale down photo sizes...
 - when you click "Add to Cart", it'd be cool to have a little pop-up: "Successfully added to cart" w/ option to view cart
-
+---> another idea - just change the text to a green check mark for 1s then back to normal...
 - shopping cart should have a column tallying up the price, and displaying total price
+- cart needs to cap quantity... max of 5 for any item
 - add some text or logo for when the cart is empty...

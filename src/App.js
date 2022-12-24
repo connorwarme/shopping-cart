@@ -18,6 +18,7 @@ const App = () => {
   const findIndex = (id) => {
     return cart.findIndex(item => item.id === id);
   }
+  // i don't use this function.. ?
   const findProduct = (id) => {
     const product = productList.find(item => item.id === id);
     console.log(product);
@@ -43,11 +44,10 @@ const App = () => {
   }
   const adjustQuantity = (id, boolean) => {
     const cartCopy = [...cart];
-    console.log(cartCopy);
     const index = findIndex(id);
-    console.log(index);
+    let value = cartCopy[index].quantity;
     if (boolean) {
-      cartCopy[index].quantity += 1;
+      cartCopy[index].quantity = value < 5 ? value += 1 : value;
     } else {
       cartCopy[index].quantity -= 1;
     }

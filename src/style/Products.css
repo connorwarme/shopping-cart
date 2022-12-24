@@ -31,18 +31,30 @@
     grid-template-columns: 1fr 1fr;
     width: 300px;
 }
-.product-buttons > button {
+.view,
+.add-to-cart {
     padding: 5px 10px;
     border: 2px solid black;
     margin: 10px 15px 0 15px;
-    transition-duration: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.product-buttons > button:hover {
+.view:hover,
+.add-to-cart:hover {
     cursor: pointer;
 }
-.product-buttons > button:active {
+.view:active,
+.add-to-cart:active {
     transform: scale(0.97);
     box-shadow: 1px 1px 3px black;
+}
+.add-to-cart > img {
+    height: 24px;
+}
+.add-check {
+    padding: 0 10px;
+    border: 2px solid rgb(67, 140, 71);
 }
 .view > a {
     text-decoration: none;

@@ -121,3 +121,8 @@ li > * {
 .checkout-container > button > a:active {
 
 }
+@media (prefers-reduced-motion: no-preference) {
+    .cart-logo-container > img {
+      animation: cart-logo 4s ease-in-out;
+    }
+  }

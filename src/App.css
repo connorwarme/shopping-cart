@@ -74,11 +74,19 @@ ul > a:active {
 }
 
 
-@keyframes App-logo-spin {
+@keyframes cart-logo {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(45deg);
+  }
+}
+@keyframes logo-2 {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-45deg);
   }
 }

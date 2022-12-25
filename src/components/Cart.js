@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Logo from '../imgs/cart.png';
 import '../style/Cart.css';
 
 const Cart = ({ cart, del, inc, dec }) => {
@@ -18,6 +19,15 @@ const Cart = ({ cart, del, inc, dec }) => {
                 <div className="checkout-container">
                     <p>Order Total: ${calculateTotal()}</p>
                     <button><Link to="/checkout">Checkout</Link></button>
+                </div>
+            )
+        }
+    }
+    const cartLogo = () => {
+        if (cart.length === 0) {
+            return (
+                <div className="cart-logo-container">
+                    <img src={Logo} alt="Empty Shopping Cart"></img>
                 </div>
             )
         }
@@ -45,6 +55,7 @@ const Cart = ({ cart, del, inc, dec }) => {
                 )
             })}
             </ul>
+            <div>{cartLogo()}</div>
             <div className="cart-total">{checkoutBtn()}</div>
             </div>
         </div>

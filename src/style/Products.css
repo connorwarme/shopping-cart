@@ -58,16 +58,10 @@
     padding: 0 10px;
     border: 2px solid rgb(67, 140, 71);
 }
+.add-close {
+    padding: 2.5px 10px;
+}
 .view > a {
     text-decoration: none;
     color: black;
-}
-.view > a:visited {
-
-}
-.view > a:hover {
-    
-}
-.view > a:active {
-    
 }

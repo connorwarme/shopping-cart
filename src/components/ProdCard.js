@@ -1,25 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Add from "../imgs/cart-check.png";
+import Close from "../imgs/close.png";
 
 const ProdCard = ({ data, add, view }) => {
-    const addedDisplay = (dom) => {
+    const addedDisplay = (dom, boolean) => {
         dom.textContent = '';
-        const photo = document.createElement('img');
-        photo.src = Add;
-        photo.alt = "Added ✔️";
+        let photo = document.createElement('img');
+        if (boolean) {
+            photo.src = Add;
+            photo.alt = "Added ✔️";
+            dom.classList.add('add-check');
+        } else {
+            photo.src = Close;
+            photo.alt = "Quantity max: 5";
+            dom.classList.add('add-close');
+        }
         dom.appendChild(photo);
-        dom.classList.add('add-check');
     }
-    const normalDisplay = (dom) => {
+    const normalDisplay = (dom, boolean) => {
         dom.removeChild(dom.firstChild);
         dom.textContent = "Add to Cart";
-        dom.classList.remove('add-check');
+        let text = boolean ? 'add-check' : 'add-close';
+        dom.classList.remove(text);
     }
     const addToCartVisual = (e) => {
-        add(e);
-        addedDisplay(e.target);
-        setTimeout(() => {normalDisplay(e.target)}, 1000);
+        const report = add(e);
+        console.log(report);
+        if (report[0] === true) {
+            addedDisplay(e.target, true);
+            setTimeout(() => {normalDisplay(e.target, true)}, 1000);
+        } else {
+            addedDisplay(e.target, false);
+            setTimeout(() => {normalDisplay(e.target, false)}, 100000);
+            console.log(report[1]);
+        }
     }
     return (
         <div className="product-card" id={data.id}>

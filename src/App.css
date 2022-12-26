@@ -30,10 +30,8 @@
 nav {
   display: flex;
 }
-ul {
+.header-container > nav > ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 ul > a {
   text-decoration: none;

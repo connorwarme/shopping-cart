@@ -23,7 +23,6 @@
     width: 35px;
     background-color: rgba(241, 241, 241, 0.8);
     border: 1px solid black;
-    box-shadow: 1px 1px 1px black;
     border-radius: 18px;
     margin: 0 10px;
     transition-duration: .25s;

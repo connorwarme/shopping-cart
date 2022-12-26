@@ -122,12 +122,6 @@ li > * {
 .checkout-container > button > a:visited {
     color: black;
 }
-.checkout-container > button > a:hover {
-
-}
-.checkout-container > button > a:active {
-
-}
 @media (prefers-reduced-motion: no-preference) {
     .cart-logo-container > img {
       animation: cart-logo infinite 4s linear;

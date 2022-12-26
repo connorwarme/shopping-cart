@@ -57,19 +57,10 @@ ul > a::after {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-ul > a:visited {
-  
-}
-ul > a:hover {
-
-}
 ul > a:hover::before,
 ul > a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-ul > a:active {
-
 }
 .cart-logo-img {
   height: 24px;
@@ -77,7 +68,7 @@ ul > a:active {
 .cart-number-bubble {
   min-width: 24px;
   height: 24px;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   border-radius: 12px;
   margin: 0 3px;
   display: flex;

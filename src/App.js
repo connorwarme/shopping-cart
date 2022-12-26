@@ -7,6 +7,7 @@ import Product from "./components/Product";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
+import CartLogo from './imgs/cart.png';
 import content from "./components/Content";
 import './App.css';
 
@@ -78,7 +79,7 @@ const App = () => {
           <ul><Link to="/">Home</Link></ul>
           <ul><Link to="/about">About</Link></ul>
           <ul><Link to="/products">Packages</Link></ul>
-          <ul><Link to="/cart">Cart: {cartNumber}</Link></ul>
+          <ul><Link to="/cart"><img className="cart-logo-img" src={CartLogo} alt="Cart:"></img><div className="cart-number-bubble">{cartNumber}</div></Link></ul>
         </nav>
       </div>
       <Routes>

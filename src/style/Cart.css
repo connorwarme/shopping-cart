@@ -123,6 +123,6 @@ li > * {
 }
 @media (prefers-reduced-motion: no-preference) {
     .cart-logo-container > img {
-      animation: cart-logo 4s ease-in-out;
+      animation: cart-logo infinite 4s linear;
     }
   }

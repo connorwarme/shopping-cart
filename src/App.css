@@ -74,19 +74,10 @@ ul > a:active {
 }
 
 
-@keyframes cart-logo {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(45deg);
-  }
-}
-@keyframes logo-2 {
-  from {
-    transform: rotate(45deg);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
+@keyframes cart-logo { 
+    20% { transform: rotate(20deg); } 
+    40% { transform: rotate(-10deg); } 
+    60% { transform: rotate(15deg); } 
+    80% { transform: rotate(-15deg); } 
+    100% { transform: rotate(0deg); } 
 }

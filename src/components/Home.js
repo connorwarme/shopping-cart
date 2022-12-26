@@ -7,8 +7,11 @@ const Home = () => {
         app.removeAttribute('id');
     }, [])
     return (
-        <div className="home">
-
+        <div className="home-container">
+            <div className="home-content">
+                <h1>Athlete</h1>
+                <h1>Dietician</h1>
+            </div>
         </div>
     )
 }

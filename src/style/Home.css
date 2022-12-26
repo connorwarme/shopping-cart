@@ -1,5 +1,18 @@
-.home {
+.home-container {
     flex-grow: 1;
+    display: flex;
+}
+.home-content {
+    margin: 35vh 10vw;
+}
+.home-content > h1 {
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    color: rgba(241, 241, 241, 0.8);
+    text-transform: uppercase;
+}
+.home-content > h1:first-child {
+    border-bottom: 14px solid rgba(241, 241, 241, 0.8);
 }
 .name-container {
     padding: 20px;

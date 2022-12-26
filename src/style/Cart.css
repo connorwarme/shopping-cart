@@ -28,6 +28,13 @@
 li > * {
     padding: 2px 0;
 }
+.cart-item-title > a {
+    text-decoration: none;
+    color: black;
+}
+.cart-item-title > a:hover {
+    cursor: pointer;
+}
 .cart-buttons {
     display: flex;
     justify-content: center;

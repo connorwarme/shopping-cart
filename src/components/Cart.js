@@ -41,7 +41,7 @@ const Cart = ({ cart, del, inc, dec }) => {
                 const price = Number(product.price) * product.quantity;
                 return (
                     <li key={product.id}>
-                        <h2>{product.title}</h2>
+                        <h2 className="cart-item-title"><Link to={`/products/${product.url}`} state={product}>{product.title}</Link></h2>
                         <p>{product.about}</p>
                         <p>Quantity: {product.quantity}</p>
                         <p>Price: ${product.price}</p>

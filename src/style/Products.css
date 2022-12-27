@@ -13,6 +13,7 @@
     border-radius: 3px;
 }
 .products-title {
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
     margin-top: 25px;
 }
 .product-card {
@@ -27,6 +28,10 @@
     align-items: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+.product-card > h1 {
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
 }
 .product-buttons {
     display: grid;

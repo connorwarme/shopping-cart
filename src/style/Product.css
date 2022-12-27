@@ -18,6 +18,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.product > h1 {
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+}
 .adjust-container > button {
     height: 35px;
     width: 35px;

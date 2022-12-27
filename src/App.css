@@ -46,6 +46,7 @@ nav {
   display: flex;
 }
 ul > a {
+  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -78,10 +79,11 @@ ul > a:hover::after {
   height: 24px;
 }
 .cart-number-bubble {
-  min-width: 24px;
-  height: 24px;
+  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  min-width: 30px;
+  height: 30px;
   background-color: rgba(241, 241, 241, 0.8);
-  border-radius: 12px;
+  border-radius: 10px;
   margin: 0 3px;
   display: flex;
   justify-content: center;

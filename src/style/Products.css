@@ -59,7 +59,8 @@
     border: 2px solid rgb(67, 140, 71);
 }
 .add-close {
-    padding: 2.5px 10px;
+    padding: 2px 10px;
+    border: 2px solid rgb(198, 40, 40);
 }
 .view > a {
     text-decoration: none;

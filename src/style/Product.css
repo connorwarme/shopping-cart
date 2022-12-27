@@ -53,6 +53,9 @@
     border: 2px solid black;
     border-radius: 2px;
     margin: 10px 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .product-add-btn:hover {
     cursor: pointer;
@@ -63,11 +66,12 @@
     box-shadow: 1px 1px 3px black;
 }
 .package-add-check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
+    padding: 9px 20px;
     border: 2px solid rgb(67, 140, 71);
+}
+.package-add-close {
+    padding: 9px 20px;
+    border: 2px solid rgb(198, 40, 40);
 }
 .product-add-btn > img {
     height: 26px;

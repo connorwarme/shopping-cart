@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Add from '../imgs/cart-check.png';
+import Close from "../imgs/close.png";
 import '../style/Product.css';
 
 const Product = (props) => {
@@ -37,28 +38,38 @@ const Product = (props) => {
         setQuantity(Number(e.target.value));
         checkNumber(Number(e.target.value));
     }
-    const addedDisplay = (dom) => {
+    const addedDisplay = (dom, boolean) => {
         dom.textContent = '';
         const photo = document.createElement('img');
-        photo.src = Add;
-        photo.alt = "Added ✔️";
+        if (boolean) {
+            photo.src = Add;
+            photo.alt = "Added ✔️";
+            dom.classList.add('package-add-check');
+        } else {
+            photo.src = Close;
+            photo.alt = 'Quantity max: 5'
+            dom.classList.add('package-add-close');
+        }
         dom.appendChild(photo);
-        dom.classList.add('package-add-check');
     }
-    const normalDisplay = (dom) => {
+    const normalDisplay = (dom, boolean) => {
         dom.removeChild(dom.firstChild);
         dom.textContent = "Add to Cart";
-        dom.classList.remove('package-add-check');
+        let text = boolean ? 'package-add-check' : 'package-add-close';
+        dom.classList.remove(text);
     }
     const handleAdd = (e) => {
-        console.log(error.length);
         const value = Number(document.getElementsByClassName('package-input')[0].value);
-        console.log(value);
         checkNumber(value);
         if (error.length === 0) {
-            add(e, quantity);
-            addedDisplay(e.target);
-            setTimeout(() => {normalDisplay(e.target)}, 1000);
+            const report = add(e, quantity);
+            if (report[0] === true) {
+                addedDisplay(e.target, true);
+                setTimeout(() => {normalDisplay(e.target, true)}, 1000);
+            } else {
+                addedDisplay(e.target, false);
+                setTimeout(() => {normalDisplay(e.target, false)}, 1000);
+            }
         }
     }
     return (

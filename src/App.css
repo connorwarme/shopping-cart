@@ -39,6 +39,11 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+.name-container > a {
+  font-family: inherit;
+  text-decoration: none;
+  color: black;
+}
 nav {
   display: flex;
 }

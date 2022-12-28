@@ -88,7 +88,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="header-container">
-        <div className="name-container">Amity Warme</div>
+        <div className="name-container"><Link to="/">Amity Warme</Link></div>
         <nav>
           <ul><Link to="/">Home</Link></ul>
           <ul><Link to="/about">About</Link></ul>

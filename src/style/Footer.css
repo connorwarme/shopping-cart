@@ -1,0 +1,24 @@
+.footer-container {
+    background-color: rgba(241, 241, 241, 0.6);
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0 4px 0;
+}
+.icon-container > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container > a > img {
+    height: 30px;
+}
+.icon-container > a > img:hover {
+    filter: invert(100%);
+}
+.footer-content > p {
+    padding-bottom: 4px;
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+}

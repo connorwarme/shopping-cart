@@ -9,7 +9,7 @@ import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import CartLogo from './imgs/cart.png';
-import { content } from "./components/Content";
+import { content, photo } from "./components/Content";
 import './App.css';
 
 const App = () => {
@@ -79,6 +79,9 @@ const App = () => {
       removeFromCart(e);
     }
   }
+  const updatePhotog = (index) => {
+    setPhotog(photo[index]);
+  }
 
   useEffect(() => {
     let value = 0;
@@ -98,13 +101,13 @@ const App = () => {
         </nav>
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Home photo={updatePhotog} />} />
+        <Route path="/about" element={<About photo={updatePhotog} />} />
         <Route path="/products">
-          <Route index element={<Products add={addToCart} prod={productList}/>} />
-          <Route path=":id" element={<Product add={addToCart} cart={cart}/>} />
+          <Route index element={<Products add={addToCart} prod={productList} photo={updatePhotog}/>} />
+          <Route path=":id" element={<Product add={addToCart} cart={cart} />} />
         </Route>
-        <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement}/>} />
+        <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement} photo={updatePhotog}/>} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

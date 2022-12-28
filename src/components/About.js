@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import '../style/About.css';
 
-const About = () => {
+const About = ({photo}) => {
     useEffect(() => {
         const app = document.querySelector('div.app');
         app.setAttribute('id', 'about');
-    }, [])
+
+        photo(1);
+    }, [photo]);
 
     return (
         <div className="about-container">

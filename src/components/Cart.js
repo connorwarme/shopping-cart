@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import Logo from '../imgs/cart.png';
 import '../style/Cart.css';
 
-const Cart = ({ cart, del, inc, dec }) => {
+const Cart = ({ cart, del, inc, dec, photo }) => {
     useEffect(() => {
         const app = document.querySelector('div.app');
         app.setAttribute('id', 'cart');
-    }, [])
+
+        photo(3);
+    }, [photo])
     const calculateTotal = () => {
         let value = 0;
         cart.forEach(item => value += item.price * item.quantity);

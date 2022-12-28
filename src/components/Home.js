@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import '../style/Home.css';
 
-const Home = () => {
+const Home = ({ photo }) => {
     useEffect(() => {
         const app = document.querySelector('div.app');
         app.removeAttribute('id');
-    }, [])
+
+        photo(0);
+    }, [photo])
     return (
         <div className="home-container">
             <div className="home-content">

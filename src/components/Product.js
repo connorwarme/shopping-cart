@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Add from '../imgs/cart-check.png';
+import AddPhoto from '../imgs/cart-check.png';
 import Close from "../imgs/close.png";
 import '../style/Product.css';
 
-const Product = (props) => {
+const Product = ({ add, photo }) => {
     useEffect(() => {
         const app = document.querySelector('div.app');
         app.setAttribute('id', 'product');
-    }, [])
+
+        photo(2);
+    }, [photo])
     const location = useLocation();
     const obj = location.state;
-    const add = props.add;
+    const addFn = add;
 
     const [quantity, setQuantity] = useState(1);
     const [error, setError] = useState('');
@@ -42,7 +44,7 @@ const Product = (props) => {
         dom.textContent = '';
         const photo = document.createElement('img');
         if (boolean) {
-            photo.src = Add;
+            photo.src = AddPhoto;
             photo.alt = "Added ✔️";
             dom.classList.add('package-add-check');
         } else {
@@ -62,7 +64,7 @@ const Product = (props) => {
         const value = Number(document.getElementsByClassName('package-input')[0].value);
         checkNumber(value);
         if (error.length === 0) {
-            const report = add(e, quantity);
+            const report = addFn(e, quantity);
             if (report[0] === true) {
                 addedDisplay(e.target, true);
                 setTimeout(() => {normalDisplay(e.target, true)}, 1000);

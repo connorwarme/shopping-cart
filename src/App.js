@@ -9,13 +9,14 @@ import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import CartLogo from './imgs/cart.png';
-import content from "./components/Content";
+import { content } from "./components/Content";
 import './App.css';
 
 const App = () => {
   const [cart, setCart] = useState([]);
   const [productList, setProductList] = useState(content);
   const [cartNumber, setCartNumber] = useState(0);
+  const [photog, setPhotog] = useState('Felipe Nordenflycht');
 
   const findIndex = (id) => {
     return cart.findIndex(item => item.id === id);
@@ -107,7 +108,7 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      <Footer intel={photog}/>
     </div>
   );
 }

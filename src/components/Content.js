@@ -34,5 +34,6 @@ const content = [
         url: 'single-session',
     }
 ]
+const photo = ['Felipe Nordenflycht', 'Taylor Shaffer', 'Anthony Berley', 'JP Melville'];
 
-export default content;
+export { content, photo };

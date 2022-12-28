@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ProdCard from "./ProdCard";
-import content from "./Content";
+import { content } from "./Content";
 import '../style/Products.css';
 
 const Products = ({ add, prod }) => {

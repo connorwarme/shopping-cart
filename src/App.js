@@ -7,6 +7,7 @@ import Product from "./components/Product";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 import CartLogo from './imgs/cart.png';
 import content from "./components/Content";
 import './App.css';
@@ -106,6 +107,7 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

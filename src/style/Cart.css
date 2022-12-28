@@ -97,6 +97,9 @@ li > * {
     justify-content: center;
     align-items: center;
 }
+.checkout-content > h1 {
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+}
 .checkout-container > p {
     align-self: flex-end;
 }

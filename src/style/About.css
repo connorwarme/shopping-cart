@@ -3,10 +3,12 @@
     background-position: center center;
 }
 .about-container {
+    flex-grow: 1;
     display: flex;
     justify-content: flex-end;
 }
 .about-content {
+    height: fit-content;
     width: 600px;
     background-color: rgba(241, 241, 241, 0.8);
     margin: 100px 50px;

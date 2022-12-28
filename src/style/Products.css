@@ -3,11 +3,12 @@
     background-position: center center;
 }
 .products-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 .products-content {
-    grid-column: 2/3;
+    height: fit-content;
     background-color: rgba(241, 241, 241, 0.6);
     margin: 3vh 10vw 3vh 0;
     border-radius: 3px;

@@ -3,14 +3,16 @@
     background-position: center center;
 }
 .product-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 .product {
     min-width: 400px;
     min-height: 300px;
-    grid-column: 2/3;
+    height: fit-content;
     background-color: rgba(241, 241, 241, 0.6);
+    padding: 0 40px;
     margin: 8vh 12vw 3vh 3vw;
     border-radius: 10px;
     display: flex;

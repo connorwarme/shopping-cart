@@ -18,7 +18,11 @@
 .icon-container > a > img:hover {
     filter: invert(100%);
 }
-.footer-content > p {
+.footer-content > p:first-child {
+    padding-top: 6px;
+    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+}
+.footer-content > p:last-child {
     padding-bottom: 4px;
     font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
 }

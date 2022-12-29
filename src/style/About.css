@@ -23,3 +23,22 @@
     padding: 0 10px 15px 10px;
     margin: 0 25px;
 }
+
+@media (max-width: 1100px) {
+    .app#about {
+        background-position-x: 35%;
+    }
+    .about-content {
+        padding: 0;
+        margin: 275px 0 25px 0;
+    }
+    .about-content > h1 {
+        font-size: 30px;
+        padding: 3px 0;
+    }
+    .about-content > p {
+        font-size: 12px;
+        padding: 2px 5px;
+        margin: 0;
+    }
+}

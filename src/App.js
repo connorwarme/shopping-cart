@@ -9,6 +9,7 @@ import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import CartLogo from './imgs/cart.png';
+import Menu from './imgs/menu.svg';
 import { content, photo } from "./components/Content";
 import './App.css';
 
@@ -99,6 +100,7 @@ const App = () => {
           <ul><Link to="/products">Packages</Link></ul>
           <ul><Link to="/cart"><img className="cart-logo-img" src={CartLogo} alt="Cart:"></img><div className="cart-number-bubble">{cartNumber}</div></Link></ul>
         </nav>
+        <button className="mobile-menu"><img src={Menu} alt='Menu' /></button>
       </div>
       <Routes>
         <Route path="/" element={<Home photo={updatePhotog} />} />

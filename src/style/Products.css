@@ -70,5 +70,38 @@
 }
 .view > a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1100px) {
+    .products-content {
+        margin: 250px 3vw 25px 3vw;
+    }
+    .products-title {
+        margin: 5px;
+    }
+    .product-card {
+        min-width: fit-content;
+        min-height: 0;
+        margin: 0;
+    }
+    .product-card > h1 {
+        font-size: 24px;
+        padding: 6px 10px;
+    }
+    .product-card > p {
+        font-size: 12px;
+    }
+    .product-card > * {
+        padding: 2px 0;
+    }
+    .product-buttons {
+        place-items: center;
+        padding-bottom: 8px;
+    }
+    .product-buttons > button {
+        margin: 0;
+        min-height: 32px;
+        min-width: 110px;
+    }
 }

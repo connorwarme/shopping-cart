@@ -32,7 +32,7 @@ const ProdCard = ({ data, add, view }) => {
             setTimeout(() => {normalDisplay(e.target, true)}, 1000);
         } else {
             addedDisplay(e.target, false);
-            setTimeout(() => {normalDisplay(e.target, false)}, 100000);
+            setTimeout(() => {normalDisplay(e.target, false)}, 1000);
             console.log(report[1]);
         }
     }

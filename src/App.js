@@ -106,8 +106,8 @@ const App = () => {
         <Route path="/" element={<Home photo={updatePhotog} />} />
         <Route path="/about" element={<About photo={updatePhotog} />} />
         <Route path="/products">
-          <Route index element={<Products add={addToCart} prod={productList} photo={updatePhotog}/>} />
-          <Route path=":id" element={<Product add={addToCart} cart={cart} />} />
+          <Route index element={<Products add={addToCart} prod={productList} photo={updatePhotog} />} />
+          <Route path=":id" element={<Product add={addToCart} cart={cart} photo={updatePhotog} />} />
         </Route>
         <Route path="/cart" element={<Cart cart={cart} del={removeFromCart} inc={increment} dec={decrement} photo={updatePhotog}/>} />
         <Route path="/checkout" element={<Checkout />} />

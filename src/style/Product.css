@@ -81,3 +81,30 @@
 .product-add-btn > img {
     height: 26px;
 }
+
+@media (max-width: 1100px) {
+    .product-container {
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .product {
+        min-width: 0;
+        min-height: 0;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 3px;
+    }
+    .product > * {
+        margin: 5px;
+    }
+    .product > h1 {
+        font-size: 20px;
+    }
+    .product > p {
+        font-size: 12px;
+    }
+    .product-add-btn {
+        font-size: 18px;
+        margin: 0;
+    }
+}

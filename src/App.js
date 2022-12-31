@@ -93,6 +93,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="header-container">
+        <button className="mobile-menu"><img src={Menu} alt='Menu' /></button>
         <div className="name-container"><Link to="/">Amity Warme</Link></div>
         <nav>
           <ul><Link to="/">Home</Link></ul>
@@ -100,7 +101,6 @@ const App = () => {
           <ul><Link to="/products">Packages</Link></ul>
           <ul><Link to="/cart"><img className="cart-logo-img" src={CartLogo} alt="Cart:"></img><div className="cart-number-bubble">{cartNumber}</div></Link></ul>
         </nav>
-        <button className="mobile-menu"><img src={Menu} alt='Menu' /></button>
       </div>
       <Routes>
         <Route path="/" element={<Home photo={updatePhotog} />} />

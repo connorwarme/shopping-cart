@@ -117,8 +117,14 @@ ul > a:hover::after {
     font-size: 16px;
     padding: 2vh 0;
   }
-  .header-container > nav {
+  .header-container > nav > ul {
     display: none;
+  }
+  .header-container > nav > ul:last-child {
+    display: block;
+  }
+  nav > ul > a {
+    padding: 0;
   }
   .mobile-menu {
     display: flex;

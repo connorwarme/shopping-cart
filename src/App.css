@@ -139,4 +139,12 @@ ul > a:hover::after {
     cursor: pointer;
     transform: scale(1.15);
   }
+  .cart-logo-img {
+    height: 20px;
+  }
+  .cart-number-bubble {
+    height: 25px;
+    min-width: 25px;
+    font-size: 12px;
+  }
 }

@@ -25,3 +25,18 @@
     transform: scale(0.97);
     box-shadow: 1px 1px 3px black;
 }
+@media (max-width: 1100px) {
+    .checkout-content {
+        margin: 2vh;
+        padding: 3px 5px;
+    }
+    .checkout-content > h1 {
+        font-size: 24px;
+    }
+    .checkout-content > p {
+        font-size: 14px;
+    }
+    .checkout-content > * {
+        margin: 3px;
+    }
+}

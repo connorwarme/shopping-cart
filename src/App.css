@@ -97,6 +97,21 @@ ul > a:hover::after {
 .mobile-menu {
   display: none;   
 }
+.menu-extension {
+  display: none;
+  background-color: rgba(241, 241, 241, 0.8);
+}
+.menu-extension > * {
+  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  padding: 2vh 1vw;
+  margin: 5px 1vw;
+}
+.menu-extension > *:visited {
+
+}
 @keyframes cart-logo { 
     20% { transform: rotate(20deg); } 
     40% { transform: rotate(-10deg); } 

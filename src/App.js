@@ -18,6 +18,7 @@ const App = () => {
   const [productList, setProductList] = useState(content);
   const [cartNumber, setCartNumber] = useState(0);
   const [photog, setPhotog] = useState('Felipe Nordenflycht');
+  const [extension, setExtension] = useState('false');
 
   const findIndex = (id) => {
     return cart.findIndex(item => item.id === id);
@@ -83,7 +84,16 @@ const App = () => {
   const updatePhotog = (index) => {
     setPhotog(photo[index]);
   }
-
+  const menuFn = () => {
+    const dom = document.querySelector('div.app');
+    if (extension === 'false') {
+      dom.children[1].style.display = "flex";
+      setExtension('true');
+    } else {
+      dom.children[1].style.display = "none";
+      setExtension('false');
+    }
+  }
   useEffect(() => {
     let value = 0;
     cart.forEach(item => value += item.quantity);
@@ -93,7 +103,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="header-container">
-        <button className="mobile-menu"><img src={Menu} alt='Menu' /></button>
+        <button className="mobile-menu"><img src={Menu} alt='Menu' onClick={menuFn}/></button>
         <div className="name-container"><Link to="/">Amity Warme</Link></div>
         <nav>
           <ul><Link to="/">Home</Link></ul>
@@ -101,6 +111,12 @@ const App = () => {
           <ul><Link to="/products">Packages</Link></ul>
           <ul><Link to="/cart"><img className="cart-logo-img" src={CartLogo} alt="Cart:"></img><div className="cart-number-bubble">{cartNumber}</div></Link></ul>
         </nav>
+      </div>
+      <div className="menu-extension">
+        <Link to="/" onClick={menuFn}>Home</Link>
+        <Link to="/about" onClick={menuFn}>About</Link>
+        <Link to="/products" onClick={menuFn}>Packages</Link>
+        <Link to="/cart" onClick={menuFn}>Cart</Link>
       </div>
       <Routes>
         <Route path="/" element={<Home photo={updatePhotog} />} />

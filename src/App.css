@@ -50,7 +50,7 @@ nav {
 .header-container > nav > ul {
   display: flex;
 }
-ul > a {
+.header-container > nav > ul > a {
   font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
   color: black;
@@ -61,8 +61,8 @@ ul > a {
   align-items: center;
   position: relative;
 }
-ul > a::before,
-ul > a::after {
+.header-container > nav > ul > a::before,
+.header-container > nav > ul > a::after {
   content: '';
   display: block;
   position: relative;
@@ -75,8 +75,8 @@ ul > a::after {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-ul > a:hover::before,
-ul > a:hover::after {
+.header-container > nav > ul > a:hover::before,
+.header-container > nav > ul > a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -99,18 +99,17 @@ ul > a:hover::after {
 }
 .menu-extension {
   display: none;
+  justify-content: center;
   background-color: rgba(241, 241, 241, 0.8);
 }
 .menu-extension > * {
   font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   color: black;
   padding: 2vh 1vw;
-  margin: 5px 1vw;
-}
-.menu-extension > *:visited {
-
+  margin: 5px 2vw;
 }
 @keyframes cart-logo { 
     20% { transform: rotate(20deg); } 

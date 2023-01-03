@@ -60,8 +60,8 @@ nav {
   align-self: center;
   position: relative;
 }
-.header-container > nav > ul > a:last-child {
-  /* display: flex; */
+.header-container > nav > ul > .checkout-box {
+  display: flex;
 }
 .header-container > nav > ul > a::after,
 .menu-extension > a::after {

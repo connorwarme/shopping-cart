@@ -109,14 +109,14 @@ const App = () => {
           <ul><Link to="/">Home</Link></ul>
           <ul><Link to="/about">About</Link></ul>
           <ul><Link to="/products">Packages</Link></ul>
-          <ul><Link to="/cart"><img className="cart-logo-img" src={CartLogo} alt="Cart:"></img><div className="cart-number-bubble">{cartNumber}</div></Link></ul>
+          <ul><Link className="checkout-box" to="/cart"><img className="cart-logo-img" src={CartLogo} alt="Cart:"></img><div className="cart-number-bubble">{cartNumber}</div></Link></ul>
         </nav>
       </div>
       <div className="menu-extension">
         <NavLink to="/" onClick={menuFn}>Home</NavLink>
         <NavLink to="/about" onClick={menuFn}>About</NavLink>
         <NavLink to="/products" onClick={menuFn}>Packages</NavLink>
-        <NavLink className="checkout-box" to="/cart" onClick={menuFn}>Cart</NavLink>
+        <NavLink to="/cart" onClick={menuFn}>Cart</NavLink>
       </div>
       <Routes>
         <Route path="/" element={<Home photo={updatePhotog} />} />

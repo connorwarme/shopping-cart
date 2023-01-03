@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.d19e616f.css",
-    "main.js": "/shopping-cart/static/js/main.6ddb274e.js",
+    "main.js": "/shopping-cart/static/js/main.2ee3a437.js",
     "static/media/Shaffer_Taylor-17.Lite.jpg": "/shopping-cart/static/media/Shaffer_Taylor-17.Lite.c7f98643f16af06cd3c1.jpg",
     "static/media/Amity_Goldengate.Lite.jpg": "/shopping-cart/static/media/Amity_Goldengate.Lite.9ca61593f2218d6b87a3.jpg",
     "static/media/Surf.Lite.jpg": "/shopping-cart/static/media/Surf.Lite.b3cdb307dd48284606b9.jpg",
@@ -13,10 +13,10 @@
     "static/media/linkedin.svg": "/shopping-cart/static/media/linkedin.bbcb81dd730af01d5340d51d477f8aab.svg",
     "static/media/menu.svg": "/shopping-cart/static/media/menu.2d4061552fac064ed07690e82d099e1d.svg",
     "main.d19e616f.css.map": "/shopping-cart/static/css/main.d19e616f.css.map",
-    "main.6ddb274e.js.map": "/shopping-cart/static/js/main.6ddb274e.js.map"
+    "main.2ee3a437.js.map": "/shopping-cart/static/js/main.2ee3a437.js.map"
   },
   "entrypoints": [
     "static/css/main.d19e616f.css",
-    "static/js/main.6ddb274e.js"
+    "static/js/main.2ee3a437.js"
   ]
 }

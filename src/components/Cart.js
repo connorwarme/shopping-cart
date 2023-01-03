@@ -21,7 +21,7 @@ const Cart = ({ cart, del, inc, dec, photo }) => {
         <div className="checkout-container">
           <p>Order Total: ${calculateTotal()}</p>
           <button>
-            <Link to="/checkout">Checkout</Link>
+            <Link to="/shopping-cart/checkout">Checkout</Link>
           </button>
         </div>
       );

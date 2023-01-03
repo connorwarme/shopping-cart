@@ -116,6 +116,14 @@ nav {
 .checkout-box {
   display: flex;
 }
+.notfound {
+  flex: 1;
+}
+.notfound > h1 {
+  margin: 3vh 25vw;
+  padding: 20px 30px;
+  background-color: rgba(241, 241, 241, 0.6);
+}
 @keyframes cart-logo {
   20% {
     transform: rotate(20deg);
@@ -175,5 +183,8 @@ nav {
     height: 25px;
     min-width: 25px;
     font-size: 12px;
+  }
+  .notfound > h1 {
+    margin: 3vh 5vw;
   }
 }

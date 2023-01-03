@@ -1,110 +1,110 @@
 .app#product {
-    background-image: url('../imgs/Surf.Lite.jpg');
-    background-position: center center;
+  background-image: url("../imgs/Surf.Lite.jpg");
+  background-position: center center;
 }
 .product-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 .product {
-    min-width: 400px;
-    min-height: 300px;
-    height: fit-content;
-    background-color: rgba(241, 241, 241, 0.6);
-    padding: 0 40px;
-    margin: 8vh 12vw 3vh 3vw;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  min-width: 400px;
+  min-height: 300px;
+  height: fit-content;
+  background-color: rgba(241, 241, 241, 0.6);
+  padding: 0 40px;
+  margin: 8vh 12vw 3vh 3vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .product > h1 {
-    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
 }
 .adjust-container > button {
-    height: 35px;
-    width: 35px;
-    background-color: rgba(241, 241, 241, 0.8);
-    border: 1px solid black;
-    border-radius: 18px;
-    margin: 0 10px;
-    transition-duration: .25s;
-    transition-timing-function: ease-out;
+  height: 35px;
+  width: 35px;
+  background-color: rgba(241, 241, 241, 0.8);
+  border: 1px solid black;
+  border-radius: 18px;
+  margin: 0 10px;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
 }
 .adjust-container > button:hover {
-    cursor: pointer;
-    background-color: lightgray;
+  cursor: pointer;
+  background-color: lightgray;
 }
 .adjust-container > button:active {
-    transform: scale(0.97);
-    box-shadow: 2px 2px 4px black;
+  transform: scale(0.97);
+  box-shadow: 2px 2px 4px black;
 }
 .adjust-container > input {
-    height: 30px;
-    width: 50px;
-    background-color: rgba(241, 241, 241, 0.8);
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 2px;
+  height: 30px;
+  width: 50px;
+  background-color: rgba(241, 241, 241, 0.8);
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2px;
 }
 .product-add-btn {
-    font-size: 18px;
-    font-weight: 500;
-    width: 200px;
-    padding: 10px 20px;
-    background-color: rgba(241, 241, 241, 0.8);
-    border: 2px solid black;
-    border-radius: 2px;
-    margin: 10px 15px 0 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  width: 200px;
+  padding: 10px 20px;
+  background-color: rgba(241, 241, 241, 0.8);
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 10px 15px 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .product-add-btn:hover {
-    cursor: pointer;
-    background-color: lightgrey;
+  cursor: pointer;
+  background-color: lightgrey;
 }
 .product-add-btn:active {
-    transform: scale(0.97);
-    box-shadow: 1px 1px 3px black;
+  transform: scale(0.97);
+  box-shadow: 1px 1px 3px black;
 }
 .package-add-check {
-    padding: 9px 20px;
-    border: 2px solid rgb(67, 140, 71);
+  padding: 9px 20px;
+  border: 2px solid rgb(67, 140, 71);
 }
 .package-add-close {
-    padding: 9px 20px;
-    border: 2px solid rgb(198, 40, 40);
+  padding: 9px 20px;
+  border: 2px solid rgb(198, 40, 40);
 }
 .product-add-btn > img {
-    height: 26px;
+  height: 26px;
 }
 
 @media (max-width: 1100px) {
-    .product-container {
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .product {
-        min-width: 0;
-        min-height: 0;
-        padding: 10px;
-        margin: 15px 0;
-        border-radius: 3px;
-    }
-    .product > * {
-        margin: 5px;
-    }
-    .product > h1 {
-        font-size: 20px;
-    }
-    .product > p {
-        font-size: 12px;
-    }
-    .product-add-btn {
-        font-size: 18px;
-        margin: 0;
-    }
+  .product-container {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .product {
+    min-width: 0;
+    min-height: 0;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 3px;
+  }
+  .product > * {
+    margin: 5px;
+  }
+  .product > h1 {
+    font-size: 20px;
+  }
+  .product > p {
+    font-size: 12px;
+  }
+  .product-add-btn {
+    font-size: 18px;
+    margin: 0;
+  }
 }

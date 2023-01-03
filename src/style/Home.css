@@ -1,43 +1,43 @@
 .home-container {
-    flex-grow: 1;
-    display: flex;
+  flex-grow: 1;
+  display: flex;
 }
 .home-content {
-    margin: 35vh 10vw;
+  margin: 35vh 10vw;
 }
 .home-content > h1 {
-    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
-    font-size: 80px;
-    color: rgba(241, 241, 241, 0.8);
-    text-transform: uppercase;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
+  font-size: 80px;
+  color: rgba(241, 241, 241, 0.8);
+  text-transform: uppercase;
 }
 .home-content > h1:first-child {
-    border-bottom: 14px solid rgba(241, 241, 241, 0.8);
+  border-bottom: 14px solid rgba(241, 241, 241, 0.8);
 }
 .name-container {
-    padding: 20px;
-    display: flex;
+  padding: 20px;
+  display: flex;
 }
 .first-name,
 .last-name {
-    text-align: left;
-    font-size: 72px;
-    font-weight: 700;
-    transform: rotate(-45deg);
+  text-align: left;
+  font-size: 72px;
+  font-weight: 700;
+  transform: rotate(-45deg);
 }
 
 @media (max-width: 1100px) {
-    .home-content {
-        padding: 5vh 5vw;
-        margin: 5vh 5vw;
-        height: fit-content;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 3px;
-    }
-    .home-content > h1 {
-        font-size: 30px;
-    }
-    .home-content > h1:first-child {
-        border-bottom: 7px solid rgba(241, 241, 241, 0.8);
-    }
+  .home-content {
+    padding: 5vh 5vw;
+    margin: 5vh 5vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+  }
+  .home-content > h1 {
+    font-size: 30px;
+  }
+  .home-content > h1:first-child {
+    border-bottom: 7px solid rgba(241, 241, 241, 0.8);
+  }
 }

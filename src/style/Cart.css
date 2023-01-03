@@ -1,162 +1,162 @@
 .app#cart {
-    background-image: url('../imgs/Wolverine.Lite.jpg');
-    background-position: center center;
+  background-image: url("../imgs/Wolverine.Lite.jpg");
+  background-position: center center;
 }
 .cart-container {
-    flex-grow: 1;
-    display: flex;
+  flex-grow: 1;
+  display: flex;
 }
 .cart-content {
-    height: fit-content;
-    min-width: 400px;
-    background-color: rgba(241, 241, 241, 0.6);
-    margin: 5vh 8vw;
-    border-radius: 3px;
+  height: fit-content;
+  min-width: 400px;
+  background-color: rgba(241, 241, 241, 0.6);
+  margin: 5vh 8vw;
+  border-radius: 3px;
 }
 .cart-content > h1 {
-    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
-    margin: 10px 0;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
+  margin: 10px 0;
 }
 .cart-content > ul {
-    list-style: none;
-    margin: 0 25px;
+  list-style: none;
+  margin: 0 25px;
 }
 .cart-content > ul > li {
-    margin: 15px 0;
-    background-color: rgba(241, 241, 241, 0.8);
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+  margin: 15px 0;
+  background-color: rgba(241, 241, 241, 0.8);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 li > * {
-    padding: 2px 20px;
+  padding: 2px 20px;
 }
 .cart-item-title > a {
-    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
-    font-size: 24px;
-    text-decoration: none;
-    color: black;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
 }
 .cart-item-title > a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .cart-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .remove-btn {
-    padding: 5px 10px;
-    margin: 0 20px 0 0;
-    border: 2px solid black;
-    border-radius: 2px;
+  padding: 5px 10px;
+  margin: 0 20px 0 0;
+  border: 2px solid black;
+  border-radius: 2px;
 }
 .inc-btn,
 .dec-btn {
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    border: 2px solid black;
-    padding: 0;
-    position: relative;
-    margin: 0 5px 0 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 0;
+  position: relative;
+  margin: 0 5px 0 0;
 }
-.inc-btn::before, 
+.inc-btn::before,
 .inc-btn::after,
 .dec-btn::after {
-    content: "";
-    background-color: black;
-    height: 2px;
-    width: 10px;
-    position: absolute;
-    left: 8px;
+  content: "";
+  background-color: black;
+  height: 2px;
+  width: 10px;
+  position: absolute;
+  left: 8px;
 }
 .inc-btn::before {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .cart-buttons > button {
-    transition-duration: .2s;
-    transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 .cart-buttons > button:hover {
-    cursor: pointer;
-    background-color: lightgray;
+  cursor: pointer;
+  background-color: lightgray;
 }
 .cart-buttons > button:active {
-    transform: scale(0.97);
-    box-shadow: 1px 1px 2px black;
+  transform: scale(0.97);
+  box-shadow: 1px 1px 2px black;
 }
 .cart-item-total {
-    text-align: end;
-    padding: 0 0 5px;
-    margin: 0 25px;
+  text-align: end;
+  padding: 0 0 5px;
+  margin: 0 25px;
 }
 .checkout-container {
-    padding: 0 0 15px 0;
-    margin: 0 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 0 0 15px 0;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .checkout-content > h1 {
-    font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
 }
 .checkout-container > p {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 .checkout-container > button {
-    font-size: 18px;
-    font-weight: 500;
-    width: 200px;
-    padding: 10px 20px;
-    background-color: rgba(241, 241, 241, 0.8);
-    border: 2px solid black;
-    border-radius: 2px;
-    margin: 10px 15px 0 15px;
-    transition-duration: .3s;
+  font-size: 18px;
+  font-weight: 500;
+  width: 200px;
+  padding: 10px 20px;
+  background-color: rgba(241, 241, 241, 0.8);
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 10px 15px 0 15px;
+  transition-duration: 0.3s;
 }
 .checkout-container > button:hover {
-    cursor: pointer;
-    background-color: lightgrey;
+  cursor: pointer;
+  background-color: lightgrey;
 }
 .checkout-container > button:active {
-    transform: scale(0.97);
-    box-shadow: 1px 1px 3px black;
+  transform: scale(0.97);
+  box-shadow: 1px 1px 3px black;
 }
 .checkout-container > button > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .checkout-container > button > a:visited {
-    color: black;
+  color: black;
 }
 @media (prefers-reduced-motion: no-preference) {
-    .cart-logo-container > img {
-      animation: cart-logo infinite 4s linear;
-    }
+  .cart-logo-container > img {
+    animation: cart-logo infinite 4s linear;
   }
+}
 
 @media (max-width: 1100px) {
-    .cart-container {
-        justify-content: center;
-    }
-    .cart-content {
-        min-width: 100px;
-        margin: 3vh 0;
-    }
-    .cart-content > h1 {
-        font-size: 20px;
-        padding: 3px 20px;
-    }
-    .cart-logo-container > img {
-        height: 32px;
-    }
-    .cart-content > ul > li > * {
-        padding: 0;
-    }
-    .cart-content > ul > li > h2 > a {
-        font-size: 16px;
-    }
-    .cart-content > ul > li > p {
-        font-size: 12px;
-    }
+  .cart-container {
+    justify-content: center;
+  }
+  .cart-content {
+    min-width: 100px;
+    margin: 3vh 0;
+  }
+  .cart-content > h1 {
+    font-size: 20px;
+    padding: 3px 20px;
+  }
+  .cart-logo-container > img {
+    height: 32px;
+  }
+  .cart-content > ul > li > * {
+    padding: 0;
+  }
+  .cart-content > ul > li > h2 > a {
+    font-size: 16px;
+  }
+  .cart-content > ul > li > p {
+    font-size: 12px;
+  }
 }

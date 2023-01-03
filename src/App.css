@@ -62,6 +62,7 @@ nav {
 }
 .header-container > nav > ul > .checkout-box {
   display: flex;
+  padding: 0;
 }
 .header-container > nav > ul > a::after,
 .menu-extension > a::after {

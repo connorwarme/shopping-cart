@@ -46,7 +46,7 @@ const ProdCard = ({ data, add, view }) => {
       <p>{data.about}</p>
       <div className="product-buttons">
         <button className="view" id={data.id} onClick={view}>
-          <Link to={`/products/${data.url}`} state={data}>
+          <Link to={`/packages/${data.url}`} state={data}>
             View Product
           </Link>
         </button>

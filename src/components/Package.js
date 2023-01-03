@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AddPhoto from "../imgs/cart-check.png";
 import Close from "../imgs/close.png";
-import "../style/Product.css";
+import "../style/Package.css";
 
 const Product = ({ add, photo }) => {
   useEffect(() => {

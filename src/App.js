@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Products from "./components/Products";
-import Product from "./components/Product";
+import Packages from "./components/Packages";
+import Package from "./components/Package";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
@@ -117,7 +117,7 @@ const App = () => {
             <Link to="/about">About</Link>
           </ul>
           <ul>
-            <Link to="/products">Packages</Link>
+            <Link to="/packages">Packages</Link>
           </ul>
           <ul>
             <Link className="checkout-box" to="/cart">
@@ -134,7 +134,7 @@ const App = () => {
         <NavLink to="/about" onClick={menuFn}>
           About
         </NavLink>
-        <NavLink to="/products" onClick={menuFn}>
+        <NavLink to="/packages" onClick={menuFn}>
           Packages
         </NavLink>
         <NavLink to="/cart" onClick={menuFn}>
@@ -144,11 +144,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home photo={updatePhotog} />} />
         <Route path="/about" element={<About photo={updatePhotog} />} />
-        <Route path="/products">
+        <Route path="/packages">
           <Route
             index
             element={
-              <Products
+              <Packages
                 add={addToCart}
                 prod={productList}
                 photo={updatePhotog}
@@ -158,7 +158,7 @@ const App = () => {
           <Route
             path=":id"
             element={
-              <Product add={addToCart} cart={cart} photo={updatePhotog} />
+              <Package add={addToCart} cart={cart} photo={updatePhotog} />
             }
           />
         </Route>

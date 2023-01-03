@@ -1,24 +1,22 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
 }
 @font-face {
   font-family: "Unbound";
-  src: url(./style/Unbounded-VariableFont_wght.ttf)
-      format("truetype");
+  src: url(./style/Unbounded-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
   font-family: "Roboto Slab";
-  src: url(./style/RobotoSlab-VariableFont_wght.ttf)
-      format("truetype");
+  src: url(./style/RobotoSlab-VariableFont_wght.ttf) format("truetype");
 }
 .app {
   text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 1600px;
-  background-image: url('./imgs/Amity_Goldengate.Lite.jpg');
+  background-image: url("./imgs/Amity_Goldengate.Lite.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
@@ -34,7 +32,7 @@
   padding: 0 30px;
 }
 .name-container {
-  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
@@ -51,7 +49,7 @@ nav {
   display: flex;
 }
 .header-container > nav > ul > a {
-  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -66,7 +64,7 @@ nav {
 }
 .header-container > nav > ul > a::after,
 .menu-extension > a::after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   width: 100%;
@@ -88,7 +86,7 @@ nav {
   align-self: center;
 }
 .cart-number-bubble {
-  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
   min-width: 30px;
   height: 30px;
   background-color: rgba(241, 241, 241, 0.8);
@@ -99,7 +97,7 @@ nav {
   align-items: center;
 }
 .mobile-menu {
-  display: none;   
+  display: none;
 }
 .menu-extension {
   display: none;
@@ -107,7 +105,7 @@ nav {
   background-color: rgba(241, 241, 241, 0.8);
 }
 .menu-extension > * {
-  font-family: "Unbound", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Unbound", Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -118,12 +116,22 @@ nav {
 .checkout-box {
   display: flex;
 }
-@keyframes cart-logo { 
-    20% { transform: rotate(20deg); } 
-    40% { transform: rotate(-10deg); } 
-    60% { transform: rotate(15deg); } 
-    80% { transform: rotate(-15deg); } 
-    100% { transform: rotate(0deg); } 
+@keyframes cart-logo {
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @media (max-width: 1100px) {

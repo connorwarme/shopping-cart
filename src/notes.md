@@ -1,4 +1,6 @@
 ideas for improvement // objectives
-- fonts? would add a bunch of character
-- text content on Home? "ATHLETE / DIETICIAN" then one line athlete mantra, one line nutrition philosophy..?
+- text content on Home? "ATHLETE / DIETICIAN" could be: 
+    PROFESSIONAL ATHLETE // CERTIFIED DIETICIAN
+- transitions on mobile, when you click on menu icon
+- 
 

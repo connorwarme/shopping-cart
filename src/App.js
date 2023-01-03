@@ -107,20 +107,20 @@ const App = () => {
           <img src={Menu} alt="Menu" onClick={menuFn} />
         </button>
         <div className="name-container">
-          <Link to="/">Amity Warme</Link>
+          <Link to="/shopping-cart/">Amity Warme</Link>
         </div>
         <nav>
           <ul>
-            <Link to="/">Home</Link>
+            <Link to="/shopping-cart/">Home</Link>
           </ul>
           <ul>
-            <Link to="/about">About</Link>
+            <Link to="/shopping-cart/about">About</Link>
           </ul>
           <ul>
-            <Link to="/packages">Packages</Link>
+            <Link to="/shopping-cart/packages">Packages</Link>
           </ul>
           <ul>
-            <Link className="checkout-box" to="/cart">
+            <Link className="checkout-box" to="/shopping-cart/cart">
               <img className="cart-logo-img" src={CartLogo} alt="Cart:"></img>
               <div className="cart-number-bubble">{cartNumber}</div>
             </Link>
@@ -128,23 +128,23 @@ const App = () => {
         </nav>
       </div>
       <div className="menu-extension">
-        <NavLink to="/" onClick={menuFn}>
+        <NavLink to="/shopping-cart/" onClick={menuFn}>
           Home
         </NavLink>
-        <NavLink to="/about" onClick={menuFn}>
+        <NavLink to="/shopping-cart/about" onClick={menuFn}>
           About
         </NavLink>
-        <NavLink to="/packages" onClick={menuFn}>
+        <NavLink to="/shopping-cart/packages" onClick={menuFn}>
           Packages
         </NavLink>
-        <NavLink to="/cart" onClick={menuFn}>
+        <NavLink to="/shopping-cart/cart" onClick={menuFn}>
           Cart
         </NavLink>
       </div>
       <Routes>
-        <Route path="/" element={<Home photo={updatePhotog} />} />
-        <Route path="/about" element={<About photo={updatePhotog} />} />
-        <Route path="/packages">
+        <Route path="/shopping-cart/" element={<Home photo={updatePhotog} />} />
+        <Route path="/shopping-cart/about" element={<About photo={updatePhotog} />} />
+        <Route path="/shopping-cart/packages">
           <Route
             index
             element={
@@ -163,7 +163,7 @@ const App = () => {
           />
         </Route>
         <Route
-          path="/cart"
+          path="/shopping-cart/cart"
           element={
             <Cart
               cart={cart}
@@ -174,7 +174,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/shopping-cart/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer intel={photog} />

@@ -46,7 +46,7 @@ const Cart = ({ cart, del, inc, dec, photo }) => {
             return (
               <li key={product.id}>
                 <h2 className="cart-item-title">
-                  <Link to={`/packages/${product.url}`} state={product}>
+                  <Link to={`/shopping-cart/packages/${product.url}`} state={product}>
                     {product.title}
                   </Link>
                 </h2>

@@ -9,7 +9,7 @@ const Checkout = () => {
         <h1>Checkout Page</h1>
         <p>Awaiting logic...which I have yet to learn! Stay tuned :)</p>
         <button>
-          <Link to="/cart">Return to Cart</Link>
+          <Link to="/shopping-cart/cart">Return to Cart</Link>
         </button>
       </div>
     </div>

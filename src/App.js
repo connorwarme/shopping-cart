@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Products from "./components/Products";
@@ -113,10 +113,10 @@ const App = () => {
         </nav>
       </div>
       <div className="menu-extension">
-        <Link to="/" onClick={menuFn}>Home</Link>
-        <Link to="/about" onClick={menuFn}>About</Link>
-        <Link to="/products" onClick={menuFn}>Packages</Link>
-        <Link to="/cart" onClick={menuFn}>Cart</Link>
+        <NavLink to="/" onClick={menuFn}>Home</NavLink>
+        <NavLink to="/about" onClick={menuFn}>About</NavLink>
+        <NavLink to="/products" onClick={menuFn}>Packages</NavLink>
+        <NavLink className="checkout-box" to="/cart" onClick={menuFn}>Cart</NavLink>
       </div>
       <Routes>
         <Route path="/" element={<Home photo={updatePhotog} />} />

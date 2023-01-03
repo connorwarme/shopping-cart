@@ -1,4 +1,41 @@
-# Getting Started with Create React App
+# [Shopping Cart](https://connorwarme.github.io/shopping-cart/)  
+![homepage](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/home-full.png?raw=true "homepage preview")  
+  
+## objectives  
+* utilize React, with Test Driven Development (via Jest)  
+* implement a products page: all items listed, option to view or add to cart  
+* on product page: option to change quantity  
+* on cart page: option to change quantity, or to remove from cart  
+* serve as a mockup site for Amity (my wife), as she'll need a site as a pro athlete and certified dietician  
+* dynamically update photographer credit w/ each page change  
+* style for desktop and for mobile  
+  
+## reflections  
+* I enjoy working with React!  
+* went for a simple / sleek interface and less text but w/ cool photos  
+* added visual confirmation when item is added to cart, or not!  
+* learned how to scale down photo file sizes  
+  
+## screenshots  
+* full site version:  
+![about](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/about-full.png?raw=true "about")  
+![packages](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/packages-full.png?raw=true "packages")  
+![cart](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/cart-full.png?raw=true "cart")  
+  
+* mobile version:  
+![home](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/home-mobile.png?raw=true "home")  
+![about](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/aboutA-mobile.png?raw=true "about")  
+![package](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/package-mobile.png?raw=true "package")  
+![cart](https://github.com/connorwarme/shopping-cart/blob/main/screenshots/cart-mobile.png?raw=true "cart")  
+  
+## improvements  
+* add transitions for when user clicks on mobile menu icon + link  
+* add error message when user tries to exceed quantity maximum for given item  
+* open to suggestions - let me know!  
+  
+  
+  
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
